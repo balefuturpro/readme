@@ -53,52 +53,54 @@ L’architecture est structurée en **5 couches principales**, garantissant une 
 
 ## 5. Structure du projet
 
+```bash
 mini-ecomm-baa/
 │
 ├── public/
-│   ├── pwa-serviceworker.js      # Service Worker principal pour la PWA Service Worker pour la cache et la gestion offline)
+│   ├── pwa-serviceworker.js      # Service Worker principal pour la PWA service worker pour la gestion cache et offline)
 │   └── vite.svg                  # Logo par défaut utilisé dans index.html
 │
 ├── server/
-│   └── server.js                 # Serveur Express fournissant le SSR et CSP Headers
+│   └── server.js                 # Serveur Express contenant le SSR et les CSP Headers
 │
 ├── src/
 │   ├── api/                      # Appels HTTP via Axios vers DummyJSON API
 │   ├── assets/                   # Ressources statiques : images et fonts
 │   ├── components/               # Contient les Composants UI réutilisables
-│   ├── composables/              # Contient Hooks Composition API
+│   ├── composables/              # Contient les Hooks Composition API
 │   ├── model/                    # Modèles, types et interfaces TypeScript
 │   ├── router/                   # Configuration du Vue Router
-│   │   └── index.ts       
-│   ├── store/                    # Stores Pinia contenant Store Cart et Product 
-│   │   ├── cartStore.ts          
-│   │   └── productStore.ts       
+│   │   └── index.ts
+│   ├── store/                    # Stores Pinia contenant Store Cart et Product
+│   │   ├── cartStore.ts
+│   │   └── productStore.ts
 │   ├── utils/                    # Contient les Fonctions utilitaires réutilisables dans tout le projet
 │   │   └── cacheUtils.ts         # Gère les stratégies de cache
-│   ├── views/                    # Pages principales 
-│   │   ├── CartView.vue          # Panier Achat
-│   │   └── ProductView.vue       # Page liste produits avec recherche des produits et filtres multi-critères
+│   ├── views/                    # Pages principales
+│   │   ├── CartView.vue          # Panier d’achat
+│   │   └── ProductView.vue       # Page liste produits avec recherche et filtres multi-critères
 │   ├── app.ts                    # Point d’entrée SSR côté serveur
 │   ├── App.vue                   # Composant racine de l’application
 │   ├── entry-server.ts           # Entrée pour le rendu côté serveur (SSR)
 │   ├── main.ts                   # Entrée client-side pour l’hydratation Vue
-│   ├── registerServiceWorker.ts  # Enregistrement du Service Worker (PWA)
-│   ├── style.css                 # Style globale (thème + Tailwind)
+│   ├── registerServiceWorker.ts  # Enregistrement du Service Worker
+│   ├── style.css                 # Style global CSS avec Tailwind
 │   └── vite-env.d.ts             # Déclarations TypeScript pour Vite
 │
 ├── .editorconfig                 # Normalisation du format de code entre IDE
-├── .env.local                    # configuration des variables d’environnement local
+├── .env.local                    # Configuration des variables d’environnement local
 ├── .gitignore                    # Fichiers et dossiers exclus du dépôt Git
-├── .prettierrc                   # Configuration Prettier 
-├── eslint.config.js              # Configuration ESLint 
+├── .prettierrc                   # Configuration Prettier
+├── eslint.config.js              # Configuration ESLint
 ├── index.html                    # Point d’entrée HTML de l’application
-├── package-lock.json             # Lockfile de dépendances NPM
-├── package.json                  # fichier pour l'installation des dépendances
+├── package-lock.json             # Lockfile des dépendances NPM
+├── package.json                  # contient l'ensemble des dépendances
 ├── README.md                     # Documentation principale du projet
 ├── tsconfig.app.json             # Configuration TypeScript spécifique à l’app Vue
 ├── tsconfig.json                 # Configuration TypeScript principale
-├── tsconfig.node.json            # Config TypeScript pour le serveur et outils Node
+├── tsconfig.node.json            # Configuration TypeScript pour le serveur et outils Node
 └── vite.config.ts                # Configuration principale Vite
+
 
 
 
